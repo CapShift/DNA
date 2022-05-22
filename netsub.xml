@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<group>
+    <page
+        visible="[ -e $MODULE_PATH/jd-cli-111 ] &amp;&amp; echo 0 || echo 1"
+        config-sh="curl -Ls https://github.com/kakathic/Tool-Tool/raw/master/Module/jd-cli-111.zip2 -o $TMPDIR/modun.zip; unzip -oq $TMPDIR/modun.zip -d $START_DIR/data/module; sh $START_DIR/data/shell/modun.sh"
+        title="Download"
+        desc="Java jd-cli decompiler tool">
+    </page>
+</group>
+
+<group>
+    <page
+        visible="[ -e $MODULE_PATH/cfr-111 ] &amp;&amp; echo 0 || echo 1"
+        config-sh="curl -Ls https://github.com/kakathic/Tool-Tool/raw/master/Module/cfr-111.zip2 -o $TMPDIR/modun.zip; unzip -oq $TMPDIR/modun.zip -d $START_DIR/data/module; sh $START_DIR/data/shell/modun.sh"
+        title="Download"
+        desc="Java cfr decompiler tool">
+    </page>
+    
+    <action interruptible="false">
+        <title>ZArchiver Pro</title>
+        <desc>包名：ru.zdevs.zarchiver.pro&#x000A;版本：0.9.5.8&#x000A;版本号：9595&#x000A;已安装：（10005）&#x000A;作者：Zdevs&#x000A;描述：解压缩神器&#x000A;更新于：2021年5月29号</desc>
+        <set>. ./install_App_Store_File.sh ru.zdevs.zarchiver.pro</set>
+        <params>
+            <param name="Way" label="请选择安装方式" options-sh="printf '0|①　直接安装\ndownload|②　仅下载'" value-sh="grep_prop Way $Data_Dir/install_App_Store_File.log" />
+            <param name="File_Dir" title="当上面选择方案②时生效" type="folder" editable="true" desc="可输入要下载到的目录绝对路径，也可以通过文件选择器长按选定目录，上面是默认路径，请自行根据需求更改目录，温馨提示：可用「MT管理器」长按目录或文件 -->点属性 -->点击目录即可复制目录绝对路径，长按目录或长按名称即可复制文件绝对路径" value-sh="grep_prop File_Dir $Data_Dir/install_App_Store_File.log || echo $GJZS/APK_Extraction" />
+        </params>
+    </action>
+</group>

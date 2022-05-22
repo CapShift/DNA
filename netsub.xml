@@ -5,16 +5,13 @@
         config-sh="curl -Ls https://github.com/kakathic/Tool-Tool/raw/master/Module/jd-cli-111.zip2 -o $TMPDIR/modun.zip; unzip -oq $TMPDIR/modun.zip -d $START_DIR/data/module; sh $START_DIR/data/shell/modun.sh"
         title="主题破解"
         confirm="true">
-        <desc>版本: 2.0; 作者：Errors; 描述: 测试; 更新于：2022年5月21日</desc>
+        <desc>版本: 2.0;作者：Errors;描述: 测试;更新于：2022年5月21日</desc>
     </page>
 </group>
 
 <group>
-    <page
-        visible="[ -e $LOCAL_PATH/sub/1 ]; echo 0 || echo 1"
-        config-sh="curl -Ls https://github.com/kakathic/Tool-Tool/raw/master/Module/jd-cli-111.zip2 -o $TMPDIR/modun.zip; unzip -oq $TMPDIR/modun.zip -d $START_DIR/data/module; sh $START_DIR/data/shell/modun.sh"
-        title="卡米破解"
-        confirm="true">
-        <desc>版本: 2.0;作者：Errors;描述: 测试;更新于：2022年5月21日</desc>
-    </page>
+    <picker title="卡米破解" desc="版本: 2.0 | 作者：Errors" reload="true" interruptible="false" options-sh="echo '0|安装'; echo '1|下载';" visible="[ -f $LOCAL_PATH/sub/1 ]; echo 0 || echo 1">
+        <summary sh="echo -e '描述: 测试\n更新于：2022年5月21日"/>
+        <set>curl -Ls https://github.com/kakathic/Tool-Tool/raw/master/Module/jd-cli-111.zip2 -o $TMPDIR/modun.zip; unzip -oq $TMPDIR/modun.zip -d $START_DIR/data/module; sh $START_DIR/data/shell/modun.sh"</set>
+    </picker>
 </group>

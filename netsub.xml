@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <group>
     <page
-        visible="[ -e $LOCAL_PATH/sub/0 ] &amp;&amp; echo 0 || echo 1"
+        visible="[ -e $LOCAL_PATH/sub/0 ]; echo 0 || echo 1"
         config-sh="curl -Ls https://github.com/kakathic/Tool-Tool/raw/master/Module/jd-cli-111.zip2 -o $TMPDIR/modun.zip; unzip -oq $TMPDIR/modun.zip -d $START_DIR/data/module; sh $START_DIR/data/shell/modun.sh"
         title="主题破解"
         confirm="true">
-        <desc>版本: 2.0#x000A; 作者：Errors&#x000A; 描述: 测试&#x000A; 更新于：2022年5月21日</desc>
+        <desc>版本: 2.0; 作者：Errors; 描述: 测试; 更新于：2022年5月21日</desc>
     </page>
 </group>
 
 <group>
     <page
-        visible="[ -e $LOCAL_PATH/sub/1 ] &amp;&amp; echo 0 || echo 1"
+        visible="[ -e $LOCAL_PATH/sub/1 ]; echo 0 || echo 1"
         config-sh="curl -Ls https://github.com/kakathic/Tool-Tool/raw/master/Module/jd-cli-111.zip2 -o $TMPDIR/modun.zip; unzip -oq $TMPDIR/modun.zip -d $START_DIR/data/module; sh $START_DIR/data/shell/modun.sh"
-        title="主题破解"
+        title="卡米破解"
         confirm="true">
-        <desc>版本: 2.0#x000A; 作者：Errors&#x000A; 描述: 测试&#x000A; 更新于：2022年5月21日</desc>
+        <desc>版本: 2.0;作者：Errors;描述: 测试;更新于：2022年5月21日</desc>
     </page>
 </group>

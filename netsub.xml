@@ -10,11 +10,11 @@
 </group>
 
 <group>
-    <picker title="卡米破解" desc="版本: 2.0 | 作者：Errors" reload="true" interruptible="false" options-sh="echo '0|安装'; echo '1|下载';" visible="[ -f $LOCAL_PATH/sub/1 ]; echo 0 || echo 1">
-        <summary sh="echo -e '描述: 测试\n更新于：2022年5月21日"/>
+    <action title="卡米破解" desc="版本: 2.0 | 作者：Errors" reload="true" interruptible="false" options-sh="echo '0|安装'; echo '1|下载';" visible="[ -f $LOCAL_PATH/sub/1 ]; echo 0 || echo 1">
+        <summary sh="echo -e 描述: 测试\n更新于：2022年5月21日"/>
         <set>
             curl -Ls https://github.com/CapShift/DNA/raw/master/sub/1.dsb -o $LOCAL_PATH/sub/1.dsb;
             unzip -oq $LOCAL_PATH/sub/1.dsb -d $LOCAL_PATH/sub/1;
         </set>
-    </picker>
+    </action>
 </group>
